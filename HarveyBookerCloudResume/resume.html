@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvey Watkins Booker III - Cloud Architect</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- ... existing meta tags and title ... -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sanitize.css@19.2.2/sanitize.min.css">
+</head>
+<body>
+    <div class="resume">
+        <h1>Mr. Harvey Watkins Booker III</h1>
+        <h2>Cloud Sales & Architect</h2>
+        <p>Email: harveybooker@yahoo.com</p>
+        <p>Phone: 504-421-8488</p>
+        <p>Location: New Orleans, LA, USA</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/harvey-booker">https://www.linkedin.com/in/harvey-booker</a></p>
+
+        <div id="visitor-counter">Loading...</div>
+
+        <h2>PROFILE</h2>
+        <p>Sales Executive and Cloud Specialist with over 5 years of experience in consultative sales. Proven leader with excellent salesmanship, negotiation and closing skills. Known for great presentations and skill at increasing audiences to optimize sales with certifications as an AWS Cloud Certified Practitioner and Solutions Architect - Associate, allowing me to better communicate and collaborate on cloud with stakeholders. Gifted in building connections, demonstrating products and maintaining consistent sales. Persuasive negotiator with forward-thinking and performance-oriented nature.</p>
+
+        <h2>AREAS OF EXPERTISE</h2>
+        <ul>
+            <li>CI/CD</li>
+            <li>Business Analysis</li>
+            <li>Data Analysis</li>
+            <li>Consultative Sales</li>
+            <li>Database Management</li>
+            <li>AWS</li>
+            <li>Cloud Computing</li>
+            <li>Python</li>
+            <li>Advanced Excel Functions</li>
+            <li>Sales Demo Configuration</li>
+            <li>Pre-Sales Solutions</li>
+            <li>Linux</li>
+        </ul>
+
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <h3>Sales Executive - Mid-Market <span class="year">(04/2020 – 07/2023)</span></h3>
+        <p>Paychex, Baton Rouge, USA</p>
+        <ul>
+            <li>Achieved Annual Required Quota of $1M-$1.2M using GTM plan for efficient messaging and positioning value.</li>
+            <li>Exceeded quotas consistently utilizing strategic sales techniques (SPIN, MEDDICC).</li>
+            <li>Delivered compelling propositions through persuasive presentations and targeted marketing.</li>
+            <li>Increased revenue through effective sales strategies across the entire sales cycle, from lead prospecting to closure.</li>
+            <li>Conducted extensive market research to identify sales opportunities, surpassing goals and driving profitability.</li>
+            <li>Collaborated with Sales, Operations, and Customer Success teams for smooth client transitions</li>
+        </ul>
+
+        <h3>Inside Sales Representative <span class="year">(10/2016 – 03/2020)</span></h3>
+         <p>Blue Cross and Blue Shield of Louisiana, Baton Rouge, USA</p>
+<ul>
+            <li>Marketed and sold BCBSLA's products via telesales and digital channels, consistently delivering value</li>
+            <li>Engaged prospects, identified needs, and presented efficient digital sales solutions</li>
+            <li>Executed plans, consistently meeting quotas, and collaborated effectively across departments, optimizing sales technology tools</li>
+            <li>Managed the complete sales process, adhered to regulations, and contributed to revenue generation</li>
+            <li>Addressed customer inquiries regarding products, prices, and availability</li>
+            <li>Employed consultative selling skills to determine needs, deliver solutions, and overcome objections</li>
+        </ul>
+
+        <h2>EDUCATION</h2>
+
+        <p>Bachelor of Arts Human Resources Management - Louisiana State University</p>
+        <p>2012 – 2016 | Baton Rouge, USA</p>
+
+        <h2>CERTIFICATES</h2>
+
+   <div class="certificate-container">
+    <div class="certificate">
+        <p>
+            AWS Certified Cloud Practitioner (AWS CCP)<br>
+            AWS - 2023
+        </p>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="862944f0-5ad5-417a-b07f-c9ed5c09dfbb" data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    </div>
+
+    <div class="certificate"> <!-- Added the missing class attribute -->
+        <p>
+            AWS Certified Solutions Architect - Associate (AWS SAA)<br>
+            AWS - 2023
+        </p>
+        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="851846f9-7cde-42d8-9aa6-56c95d78133c" data-share-badge-host="https://www.credly.com"></div>
+        <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+   <script defer>
+ console.log('Script loaded');
+const counterElement = document.getElementById('visitor-counter');
+
+fetch('https://fsdfu8jhkc.execute-api.us-east-1.amazonaws.com/prod/VisitorCounterFunction', {
+  method: 'GET',
+})
+  .then(response => response.json())
+  .then(data => {
+    console.log('API Response:', data); // Log the entire response for debugging
+
+    // Check if 'count' property exists in the response
+    if (data.count !== undefined) {
+      counterElement.innerText = `You are visitor number ${data.count}`;
+    } else {
+      counterElement.innerText = 'Error: Count not available.';
+
+      // Log additional information about the response
+      console.error('Error: Count property not found in API response.', data);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    counterElement.innerText = 'Error fetching visitor count.';
+  });
+
+ </script>
+
+</body>
+</html>
+
